@@ -15,12 +15,9 @@ resource "aws_iam_policy" "developer_eks" {
         {
             "Effect": "Allow",
             "Action": [
-                # EKS 클러스터 정보 조회 권한
                 "eks:DescribeCluster",
-                # EKS 클러스터 목록 조회 권한
                 "eks:ListClusters"
             ],
-            # 모든 EKS 클러스터에 대해 적용
             "Resource": "*"
         }
     ]
